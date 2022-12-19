@@ -1,0 +1,48 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+  application:
+    name: api-weather
+  data:
+    dynamodb:
+      entity2ddl:
+        auto: none
+        gsiProjectionType: ALL
+        readCapacity: 10
+        writeCapacity: 1
+  main:
+    allow-bean-definition-overriding: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  api-docs:
+    path: /openapi
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  servlet:
+    context-path: /api-weather/api/weather/
+  port: 8080
+
+application:
+  isCloud: false
+  credentialsByRole: false
+  profileName: default
+  tablePrefix: lima
+  default-lang: es
+
+amazon:
+  dynamodb:
+    endpoint: http://localhost:4566
+    region: us-west-2
