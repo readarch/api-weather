@@ -46,3 +46,6 @@ amazon:
   dynamodb:
     endpoint: http://localhost:4566
     region: us-west-2
+
+api:
+  key: API_KEY
