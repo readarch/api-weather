@@ -1,6 +1,6 @@
 package cl.com.readarch.apiweather;
 
-import cl.com.readarch.apiweather.repository.UserJwtRepository;
+import cl.com.readarch.apiweather.repository.UserRepository;
 import cl.com.readarch.apiweather.repository.WeatherRepository;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
@@ -21,7 +21,7 @@ import org.springframework.context.annotation.FilterType;
       @ComponentScan.Filter(
           type = FilterType.ASSIGNABLE_TYPE,
           classes = {WeatherRepository.class,
-                     UserJwtRepository.class})
+                     UserRepository.class})
     })
 @OpenAPIDefinition(
     info =

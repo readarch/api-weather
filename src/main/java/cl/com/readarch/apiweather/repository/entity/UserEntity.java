@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Class UserJwtEntity.
+ * Class UserEntity.
  *
  * @author readarch
  */
@@ -17,11 +17,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@DynamoDBTable(tableName = "UsersJwt")
-public class UserJwtEntity {
-  @DynamoDBHashKey private Integer id;
+@DynamoDBTable(tableName = "Users")
+public class UserEntity {
 
-  @DynamoDBAttribute private String username;
+  @DynamoDBHashKey private String username;
 
   @DynamoDBAttribute private String password;
 

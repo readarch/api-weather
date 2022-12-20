@@ -1,18 +1,18 @@
 package cl.com.readarch.apiweather.repository;
 
-import cl.com.readarch.apiweather.repository.entity.UserJwtEntity;
+import cl.com.readarch.apiweather.repository.entity.UserEntity;
 import java.util.Optional;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
 
 /**
- * Repository Class UserJwtRepository.
+ * Repository Class UserRepository.
  *
  * @author readarch
  */
 @EnableScan
-public interface UserJwtRepository extends CrudRepository<UserJwtEntity, String> {
+public interface UserRepository extends CrudRepository<UserEntity, String> {
 
-  Optional<UserJwtEntity> findByUsername(String username);
+  Optional<UserEntity> findByUsername(String username);
 
 }

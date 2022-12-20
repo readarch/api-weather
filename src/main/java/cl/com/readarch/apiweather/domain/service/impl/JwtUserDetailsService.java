@@ -1,7 +1,7 @@
 package cl.com.readarch.apiweather.domain.service.impl;
 
-import cl.com.readarch.apiweather.repository.UserJwtRepository;
-import cl.com.readarch.apiweather.repository.entity.UserJwtEntity;
+import cl.com.readarch.apiweather.repository.UserRepository;
+import cl.com.readarch.apiweather.repository.entity.UserEntity;
 import java.util.ArrayList;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
@@ -22,15 +22,15 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class JwtUserDetailsService implements UserDetailsService {
 
-  private final UserJwtRepository userJwtRepository;
+  private final UserRepository userRepository;
 
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-    UserJwtEntity userJwtEntity = userJwtRepository.findByUsername(username).orElseThrow(() -> {
+    UserEntity userEntity = userRepository.findByUsername(username).orElseThrow(() -> {
       throw new UsernameNotFoundException("User not found with username: " + username);
     });
 
-    return new User(userJwtEntity.getUsername(), userJwtEntity.getPasswordBcrypt(), new ArrayList<>());
+    return new User(userEntity.getUsername(), userEntity.getPasswordBcrypt(), new ArrayList<>());
   }
 
 }
