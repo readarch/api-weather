@@ -1,0 +1,6 @@
+username:S	password:S	passwordBcrypt:S
+"admin"	"123456"	"$2a$10$CFGf2FPfL/1z6eAorgfsieu9kDE5pkZ3W6mnrEXxoBMnYBPqvazfy"
+"readarch"	"2008057823"	"$2a$10$ww9eshsA13sKyAflNSLwrOss5wue7Gdt00WiIAg8ibLe7Hybwr10C"
+"renzo.araos"	"read1983"	"$2a$10$tVMCkpShy0P7LDedvSZQQOErJ5vhstIW6wuXcpo18fIPyl.WHRTka"
+"demo"	"demo"	"$2a$10$1ngXujoKZ9qBHT6K6IgaQuyen7cA83xQyLiu.Dk3AGgk97sPJNZey"
+"test"	"testtest"	"$2a$10$Uti7PL/Kuu9LbC2h4x3fW.0b2zO.ZOY6Q2zE56PlarQ5xSwqw1EbO"
