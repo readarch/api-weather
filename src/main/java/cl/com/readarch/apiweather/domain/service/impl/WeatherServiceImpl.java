@@ -7,7 +7,7 @@ import cl.com.readarch.apiweather.domain.dto.response.WeatherStatisticsResponseD
 import cl.com.readarch.apiweather.domain.mapper.WeatherMapper;
 import cl.com.readarch.apiweather.domain.service.WeatherService;
 import cl.com.readarch.apiweather.repository.entity.WeatherEntity;
-import cl.com.readarch.apiweather.repository.entity.WeatherRepository;
+import cl.com.readarch.apiweather.repository.WeatherRepository;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;

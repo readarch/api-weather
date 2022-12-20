@@ -1,5 +1,6 @@
-package cl.com.readarch.apiweather.repository.entity;
+package cl.com.readarch.apiweather.repository;
 
+import cl.com.readarch.apiweather.repository.entity.WeatherEntity;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
 

@@ -46,3 +46,9 @@ amazon:
   dynamodb:
     endpoint: http://localhost:4566
     region: us-west-2
+
+jwt:
+  secret: javainuse
+
+expiration:
+  time: 2

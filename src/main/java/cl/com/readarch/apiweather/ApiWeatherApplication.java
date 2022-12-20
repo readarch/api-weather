@@ -1,6 +1,7 @@
 package cl.com.readarch.apiweather;
 
-import cl.com.readarch.apiweather.repository.entity.WeatherRepository;
+import cl.com.readarch.apiweather.repository.UserJwtRepository;
+import cl.com.readarch.apiweather.repository.WeatherRepository;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
@@ -19,7 +20,8 @@ import org.springframework.context.annotation.FilterType;
     includeFilters = {
       @ComponentScan.Filter(
           type = FilterType.ASSIGNABLE_TYPE,
-          classes = {WeatherRepository.class})
+          classes = {WeatherRepository.class,
+                     UserJwtRepository.class})
     })
 @OpenAPIDefinition(
     info =
