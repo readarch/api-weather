@@ -11,7 +11,8 @@
     </parent>
     <groupId>cl.com.readarch</groupId>
     <artifactId>api-weather</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
+    <packaging>war</packaging>
     <name>api-weather</name>
     <description>API-WEATHER</description>
     <properties>
@@ -105,6 +106,14 @@
             <version>${org.mapstruct.version}</version>
         </dependency>
         <!-- End Map Struct Dependency -->
+
+        <!-- Jackson Dependency -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+        <!-- End Jackson Dependency -->
 
         <!-- Spring Boot Starter Test Dependency -->
         <dependency>
