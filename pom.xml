@@ -12,7 +12,7 @@
     <groupId>cl.com.readarch</groupId>
     <artifactId>api-weather</artifactId>
     <version>1.0</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>api-weather</name>
     <description>API-WEATHER</description>
     <properties>
