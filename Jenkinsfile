@@ -1,20 +1,29 @@
 pipeline {
-  agent any
-  tools {
-    maven '3.8.7'
-  }
-  stages {
-    stage ('Build ...') {
-      steps {
-        sh 'mvn clean package'
-      }
+    agent any
+
+    tools {
+        maven '3.8.7'
     }
-    stage ('Deploy ...') {
-      steps {
-        script {
-          deploy adapters: [custom-tomcat-8.5(credentialsId: 'tomcat_credential', path: '', url: 'http://localhost:8085')], contextPath: '/api-weather', onFailure: false, war: 'webapp/target/*.war'
+
+    stages {
+        stage ('Building ...') {
+            steps {
+                echo 'Maven cleaning and packaging …'
+                sh 'mvn clean package'
+            }
+            post {
+                success {
+                    echo 'Archiving the artifacts ...'
+                    archiveArtifacts artifacts: '**/target/*.war', followSymlinks: false
+                }
+            }
         }
-      }
+
+        stage ('Deploying to Tomcat Server ...') {
+            steps {
+                echo 'Deploying adapters ...'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat_credential', path: '', url: 'http://localhost:8085/')], contextPath: '/api-weather', war: '**/*.war'
+            }
+        }
     }
-  }
 }
